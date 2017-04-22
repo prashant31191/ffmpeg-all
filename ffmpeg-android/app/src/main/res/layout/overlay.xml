@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llBgLayer"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:focusable="false"
+    android:gravity="bottom"
+
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Developed by Prashant Patel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:focusable="false"
+        android:textSize="10dp"
+        android:textColor="#f9f9f9"
+        android:gravity="center"
+        android:singleLine="true"
+        android:id="@+id/textview_info" />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        
+        android:state_selected="true" 
+         android:drawable="@drawable/tab_lable_1_un_pressed">
+        
+       
+      
+        <!--        animation for the rotation 
+        <animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:drawable="@drawable/tab_lable_1_un_pressed"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fromDegrees="0"
+        android:toDegrees="1080"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:repeatCount="infinite"/>    -->
+     
+     </item>
+    <item android:state_selected="false">
+        
+            <shape>
+                <solid android:color="#00FFFFFF" />
+            </shape>
+            
+            </item>
+
+</selector>

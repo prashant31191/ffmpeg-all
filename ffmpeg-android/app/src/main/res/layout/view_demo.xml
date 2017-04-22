@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.rarepebble.colorpicker.ColorPickerView
+        android:id="@+id/colorPicker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:colorpicker_showAlpha="true"
+        app:colorpicker_showHex="true"
+        android:layout_above="@+id/btnDone" />
+
+    <Button
+        android:text="Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:id="@+id/btnDone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:id="@+id/btnStop"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/btnDone"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

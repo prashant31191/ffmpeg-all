@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lemda.videoconvert" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
+    <uses-permission android:name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+
+   <!-- <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+-->
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!--android:name=".Home"  .CameraRecorder  com.colorpicker.ViewDemoActivity-->
+        <activity
+            android:name=".ActSplash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActAllList"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".Home"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".TrimAudioVideo"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ActVideoCapture"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".CameraRecorder"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".ActTabMain"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.overlay.SampleOverlayHideActivity"
+            android:label="@string/app_name" />
+
+     <!--   <activity
+            android:name="com.colorpicker.MainActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.colorpicker.ViewDemoActivity"
+            android:label="@string/app_name" />-->
+        <activity
+            android:name="com.colorpicker.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.colorpicker.ViewDemoActivity"
+            android:label="@string/app_name" />
+
+        <service android:name="com.services.RecorderService"/>
+        <service android:name="com.services.BackRecorderService"/>
+        <service android:name="com.services.SampleOverlayService" />
+        <service android:name="com.services.OverlayService" />
+
+
+
+        <!--for the Alarm Receiver-->
+        <receiver android:name="com.services.AlarmManagerBroadcastReceiver">
+            <intent-filter>
+                <action android:name="NOTIFICATION_SERVICE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:enabled="true"
+            android:exported="true"
+            android:name="com.services.ReceiverRunOnStartup"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </receiver>
+
+
+
+    </application>
+
+</manifest>

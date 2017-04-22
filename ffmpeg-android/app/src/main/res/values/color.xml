@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="crRed">#b30000</color>
+    <color name="clr_tr_black">#5222</color>
+    <color name="clr_bgHeader">#ff1744</color>
+    <color name="clr_white">#fff</color>
+
+    <color name="clrselectedTab">#fff</color>
+    <color name="clrUnselectedTab">#addd</color>
+    <color name="clr_bgFooter">#888</color>
+
+
+    <color name="clrBlack1">#222222</color>
+</resources>
