@@ -55,6 +55,7 @@ public class SampleOverlayView extends OverlayView {
             @Override
             public void onProgressChanged(SeekBar seekBar, int mProgress, boolean fromUser) {
 
+                Log.i("==p=","-========"+mProgress);
                 progress = mProgress;
                 realtimeBlurView.setBlurRadius(progress);
             }
