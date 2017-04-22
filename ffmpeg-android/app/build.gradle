@@ -11,6 +11,11 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion as Integer
         versionCode rootProject.ext.versionCode as Integer
         versionName rootProject.ext.versionName as String
+
+
+        // for the blur view
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true    // Enable RS support
     }
 
     sourceSets.main {
@@ -41,4 +46,10 @@ dependencies {
 
     compile 'com.rarepebble:colorpicker:2.0.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // for the blur image
+    compile 'com.github.mmin18:realtimeblurview:1.1.0'
+
+    // for the progressbar
+
 }
